@@ -23,6 +23,8 @@ def create_tables():
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         experiencia_id INTEGER,
         fecha_reserva TEXT NOT NULL,
+        fecha_reserva_para TEXT NOT NULL,
+        completada BOOLEAN DEFAULT 0,
         FOREIGN KEY (experiencia_id) REFERENCES experiencias(id) ON DELETE CASCADE
     )
     ''')
